@@ -1,0 +1,93 @@
+
+<html>
+  <head>
+    <title>CBL Week 10 Playoff Chances</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Team', 'Playoff Chance', 'Robertson Chance'],
+            [
+              "Colts",
+              99,
+              0
+            ],
+            [
+              "Bronny",
+              99,
+              0
+            ],
+            [
+              "Mahomo",
+              99,
+              0
+            ],
+            [
+              "Kaepernick",
+              89,
+              1
+            ],
+            [
+              "Dragons",
+              89,
+              1
+            ],
+            [
+              "BFC",
+              53,
+              14
+            ],
+            [
+              "Nerf",
+              21.5,
+              52
+            ],
+            [
+              "Alex",
+              17.5,
+              52
+            ],
+            [
+              "3Dollar",
+              15.5,
+              52
+            ],
+            [
+              "Optimize",
+              15.5,
+              52
+            ],
+            [
+              "Icebox",
+              1,
+              89
+            ],
+            [
+              "Robertson",
+              1,
+              89
+            ],
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Columbus Beer League Hopes and Dreams',
+            subtitle: 'Week 10 Chances',
+          },
+          bars: 'horizontal' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+  </head>
+  <body>
+    <div id="barchart_material" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
