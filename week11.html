@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <title>CBL Week 11 Playoff Chances</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Team', 'Playoff Chance', 'Robertson Chance'],
+            [
+              "Colts",
+              100,
+              0
+            ],
+            [
+              "Bronny",
+              100,
+              0
+            ],
+            [
+              "Mahomo",
+              99,
+              0
+            ],
+            [
+              "Dragons",
+              99,
+              0
+            ],
+            [
+              "Kaepernick",
+              74,
+              6
+            ],
+            [
+              "3Dollar",
+              37,
+              29
+            ],
+            [
+              "Alex",
+              32,
+              29
+            ],
+            [
+              "BFC",
+              32,
+              29
+            ],
+            [
+              "Optimize",
+              26,
+              29
+            ],
+            [
+              "Nerf",
+              1,
+              80
+            ],
+            [
+              "Icebox",
+              0,
+              99
+            ],
+            [
+              "Robertson",
+              0,
+              99
+            ],
+        ]);
+        var options = {
+          chart: {
+            title: 'Columbus Beer League Hopes and Dreams',
+            subtitle: 'Week 11 Chances',
+          },
+          bars: 'horizontal' // Required for Material Bar Charts.
+        };
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+  </head>
+  <body>
+    <div id="barchart_material" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
